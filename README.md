@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Recoil example
+Implementing list item without unnecessary re-rendering using React and recoil.
 
 ## Available Scripts
 
