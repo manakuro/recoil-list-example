@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useListItem } from './hooks/useList'
 
 type Props = {
@@ -8,9 +8,12 @@ type Props = {
 export const Counter: React.VFC<Props> = (props) => {
   const { listItem, upsertListItem } = useListItem(props.id)
 
-  function handleChange(diff: number) {
-    upsertListItem({ ...listItem, count: listItem.count + diff })
-  }
+  const handleChange = useCallback(
+    (diff: number) => {
+      upsertListItem({ ...listItem, count: listItem.count + diff })
+    },
+    [listItem, upsertListItem],
+  )
 
   return (
     <div>

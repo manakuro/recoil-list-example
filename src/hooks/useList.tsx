@@ -13,7 +13,7 @@ export type ListItem = {
 }
 
 const listIdsState = atom<string[]>({
-  key: 'listIds',
+  key: 'listIdsState',
   default: [],
 })
 
